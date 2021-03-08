@@ -59,9 +59,11 @@ app.get("/student/:id", function(req, res){
 
 // add /programmes endpoint
 app.get("/Students", function(req, res){
-    // return all modules
-
-    res.send("All Students");
+    // call get students on data
+    data.getStudents(function(students){
+        res.json(students);
+    });
+    
 
 });
 
