@@ -18,17 +18,18 @@ app.use(express.static("static"));
 
 // add /module endpoint
 app.get("/module/:code", function(req, res){
-    // return "Module and code"
-
-    res.send("Module: "+ req.params.code);
-
+    // call getModule
+    data.getModules(req.params.code, function(module){
+        res.json(module);
+    });
 });
 
 // add /modules endpoint
 app.get("/modules", function(req, res){
-    // return all modules
-
-    res.send("All Modules");
+     // call get students on data
+     data.getModules(function(modules){
+        res.json(modules);
+    });
 
 });
 
@@ -42,9 +43,10 @@ app.get("/programme/:code", function(req, res){
 
 // add /programmes endpoint
 app.get("/programmes", function(req, res){
-    // return all modules
-
-    res.send("All Programmes");
+     // call get students on data
+     data.getProgrammes(function(programmes){
+        res.json(programmes);
+    });
 
 });
 
@@ -57,7 +59,7 @@ app.get("/student/:id", function(req, res){
 
 });
 
-// add /programmes endpoint
+// add /students endpoint
 app.get("/Students", function(req, res){
     // call get students on data
     data.getStudents(function(students){
@@ -74,3 +76,5 @@ app.listen(3000, function(err){
     }
     console.log('listening on port 3000')
 });
+
+
