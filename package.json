@@ -1,0 +1,24 @@
+{
+  "name": "sd2casestudy",
+  "version": "1.0.0",
+  "description": "student database case study",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LTJ-ltd-Josh/sd2CaseStudy.git"
+  },
+  "author": "Josh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LTJ-ltd-Josh/sd2CaseStudy/issues"
+  },
+  "homepage": "https://github.com/LTJ-ltd-Josh/sd2CaseStudy#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "sqlite3": "^5.0.2"
+  }
+}
