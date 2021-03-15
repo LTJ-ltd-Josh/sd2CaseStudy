@@ -108,7 +108,7 @@ exports.getModules = function(callback){
     });
 }
 
-exports.getModules = function(code, callback){
+exports.getModule = function(code, callback){
 
     //SQL query
     var sql = `SELECT * FROM Modules WHERE code = ${code}`;
