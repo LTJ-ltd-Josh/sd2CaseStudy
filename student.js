@@ -5,9 +5,9 @@ exports.Student = class {
     //student id
     id;
     //student firstname
-    firstName;
+    first_name;
     //student last name
-    lastName;
+    last_name;
     //student programme
     programme;
     // student modules and grades
@@ -16,8 +16,8 @@ exports.Student = class {
     constructor(id, firstName, lastName, programme){
 
         this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.first_name = firstName;
+        this.last_name = lastName;
         this.programme = programme;
     }
 }
