@@ -15,6 +15,8 @@ var app = express()
 // add static files location
 app.use(express.static("static"));
 
+// add JSON parsing for incoming data
+app.use(express.json());
 
 // add /module endpoint
 app.get("/module/:code", function(req, res){
@@ -32,6 +34,13 @@ app.delete("/module/:code", function(req, res){
 
         res.send("OK");
     });
+
+});
+
+// endpoint to add new modules
+app.post("/modules", function(req, res){
+    // call insert module on data
+    
 
 });
 
