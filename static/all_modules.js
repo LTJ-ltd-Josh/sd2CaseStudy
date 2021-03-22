@@ -25,6 +25,7 @@ mainApp.controller("moduleController", function($scope, $http) {
   $scope.new_module = new Module("", "");
 
   $scope.createModule = function(){
+    console.log('function called')
     // send new data to server
     $http.post("/modules", $scope.new_module).then(function(response){
 
@@ -33,7 +34,7 @@ mainApp.controller("moduleController", function($scope, $http) {
 
       // refresh list of modules
       $http.get("/modules").then(function(response){
-        $scope.modules = resonse.data;
+        $scope.modules = response.data;
       });
     });
   };

@@ -37,12 +37,7 @@ app.delete("/module/:code", function(req, res){
 
 });
 
-// endpoint to add new modules
-app.post("/modules", function(req, res){
-    // call insert module on data
-    
 
-});
 
 // add /modules endpoint
 app.get("/modules", function(req, res){
@@ -53,6 +48,13 @@ app.get("/modules", function(req, res){
 
 });
 
+// endpoint to add new modules
+app.post("/modules", function(req, res){
+    // call createModule on data
+    data.createModule(req.body, function(){
+        res.send("OK");
+    });
+});
 
 
 // add /programme endpoint

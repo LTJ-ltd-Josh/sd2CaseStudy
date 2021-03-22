@@ -142,3 +142,15 @@ exports.deleteModule = function(code, callback){
         callback()
     });
 };
+
+exports.createModule = function(module, callback){
+    console.log(module);
+    // create SQL Insert statement
+    var sql = `INSERT INTO Modules VALUES('${module.code}', '${module.name}')`;
+
+    
+    // execute SQL insert statement
+    db.exec(sql, function(err){
+        callback()
+    });
+};
