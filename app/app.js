@@ -24,6 +24,17 @@ app.get("/module/:code", function(req, res){
     });
 });
 
+// delete endpoint for module by code
+app.delete("/module/:code", function(req, res){
+    // call delete module on data.
+    
+    data.deleteModule(req.params.code, function(){
+
+        res.send("OK");
+    });
+
+});
+
 // add /modules endpoint
 app.get("/modules", function(req, res){
      // call get students on data
@@ -32,6 +43,8 @@ app.get("/modules", function(req, res){
     });
 
 });
+
+
 
 // add /programme endpoint
 app.get("/programme/:code", function(req, res){

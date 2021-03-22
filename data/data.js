@@ -125,3 +125,20 @@ exports.getModule = function(code, callback){
     //return module
     callback(module);
 };
+
+// delete module function
+
+exports.deleteModule = function(code, callback){
+    //create SQL delete statement
+    console.log(code);
+    var sql = `DELETE FROM Modules WHERE code='${code}'`;
+
+    // execute SQL
+    db.exec(sql, function(err){
+        if (err){console.log(err.message)}
+
+        console.log('db updated')
+
+        callback()
+    });
+};

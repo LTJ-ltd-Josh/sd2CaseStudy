@@ -10,6 +10,8 @@ mainApp.controller("moduleController", function($scope, $http) {
   });
 
   $scope.deleteModule = function(code){
+      console.log(code)
+
       // send delete message to node server
       $http.delete("/module/" + code).then(function(response){
         // refresh list of modules
@@ -17,9 +19,6 @@ mainApp.controller("moduleController", function($scope, $http) {
           $scope.modules = response.data;
         });
 
-      });
-
-      
-
+      });  
   };
 });
